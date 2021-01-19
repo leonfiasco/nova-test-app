@@ -1,0 +1,17 @@
+.forecast-card {
+    background-color: grey;
+    border-radius: 10px;
+    display: flex;
+}
+
+.day {
+    color: #fff;
+}
+
+.temp {
+    color: #fff;
+}
+
+.img {
+    color: #fff;
+}

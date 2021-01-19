@@ -3,16 +3,12 @@ import React from 'react';
 import '../styles/Forecast.css';
 
 function Forecast({ forecast }) {
-    const fiveDay = () => {
-        for (let i = 0; i < forecast.list.length; i+= 8) {
-            return forecast.list[i];
-        }
-     }
-
-     console.log(fiveDay);
+    const arr = forecast.list;
     return (
         <div className='weather-list'>
-            {
+            {arr && arr.map((el, i) => {
+                
+            })
              
             }
         </div>

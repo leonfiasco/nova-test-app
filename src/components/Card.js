@@ -1,14 +1,34 @@
 import React from 'react';
+import Image from './Image';
 
 import '../styles/Card.css';
 
-function Card({ i, date }) {
-    console.log(date);
+import cloud from '../images/clouds.svg'; 
+import rain from '../images/rain.svg';
+import drizzle from '../images/drizzle.svg';
+import mist from '../images/mist.svg';
+import fog from '../images/fog.svg';
+
+function Card({ date, temp, img }) {
     return (
         <div className='forecast-card'>
             <div className='day'><h3>Mon</h3></div>
-            <div className='temp'><h3>10°</h3></div>
-            <div className='img'><p>blah</p></div>
+            <div className='temp'><h3>{Math.round(temp)}°</h3></div>
+            <div className='img'>{(() => {
+                            switch (img) {
+                                case 'Clouds':
+                                return <Image cloud={cloud}/>;
+                                case 'Rain':
+                                return <Image rain={rain}/>;
+                                case 'Drizzle':
+                                return <Image drizzle={drizzle}/>;
+                                case 'Mist':
+                                return <Image mist={mist} />;
+                                case 'Fog':
+                                return <Image fog={fog} />;
+                                default:
+                            }
+                        })()}</div>
         </div>
     )
 }

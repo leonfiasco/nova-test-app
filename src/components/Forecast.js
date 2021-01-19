@@ -8,7 +8,8 @@ function Forecast({ forecast }) {
     return (
         <div className='weather-list'>
             {arr && arr.map((el, i) => {
-                return i % 8 === 0 ? <Card key={i} date={el.dt_txt}/> : null
+                console.log(el)
+                return i % 8 === 0 ? <Card key={i} date={el.dt_txt} temp={el.main.temp} img={el.weather[0].main}/> : null
             }) }
         </div>
     )

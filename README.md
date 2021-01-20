@@ -1,6 +1,4 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -14,57 +12,38 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instructions
 
-### `yarn build`
+I used create-react-app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Firstly I created a wrapper component that will be the parent component, secondly I made a header that would contain the current weather information such as city e.g London and the current temperature, and a progress bar for reloading the data every minute and also the current time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get the weather data I created a custom hook called useApi, which I used async/await and axios to retrieve the api and once this was available I passed the data into a component called Main.js that will house my header and the forecast for the next 5 days.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+Next I created another component called forecast that will eventually contain a card list of the 5 days
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Similiarly to the useApi custom hook, I used async/await and axios to retrieve the api but this time its was a different endpoint and once this was available I passed the data into a component called Main.js using the use state hook 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+now the data in forcast was available I had to run a loop on the array that was given and because the array of days had a 3 hour timestamp for each day I had to do some math, which was 24hrs / 3 = 8 so I used modulus to give me back the array indexes that were multiple of 8 and that gave me the next 5 days and  once that was done I made a card component for each of the five days and I passed the necessary props into the card
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+I also made a folder called images whih will contain all the weather images and a component called Image that will look through the api's weather description and will return the relevant image for the specific weather condition and I did this using an IIFE and a switch statement.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Then I finally styled the app, and in the forecast component made a setinterval for the progresss bar that every 60sec that app will reload and refresh the weather data 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Improvements 
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If I had more time I would make an input field that given a query I could get the current weather for my chosen location and get the forecast for the next five days
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+I would also like to add some more animations to liven up my app and make it more interactive 
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+I would also find a way to put the images into one file and some destructure them and import them into the card component
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

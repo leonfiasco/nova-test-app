@@ -47,3 +47,4 @@ I would also like to add some more animations to liven up my app and make it mor
 
 I would also find a way to put the images into one file and some destructure them and import them into the card component
 
+I would've like to complete the bonus challenge to add some error handling I will probanly do this soon for learning purposes

@@ -11,8 +11,9 @@ import Forecast from './Forecast';
 
 
 function Main() {
-    const [weather] = useApi([]);
+    const [weather] = useApi();
     const [forecast] = forecastApi([]);
+
     return (
         <div className="main">
             <Header weather={weather}/>

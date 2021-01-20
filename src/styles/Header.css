@@ -3,12 +3,29 @@
     color: aliceblue;
 }
 
+.city-name {
+    padding-left: 20px;
+}
+
+.city-name h3 {
+    font-size: 23px;
+}
+
 
 .current-time {
     height: 55px;
     width: 100px;
     border: 2px solid #000;
     margin: 0 auto;
+
+}
+
+.current-temp {
+    padding-right: 20px;
+}
+
+.current-temp h3 {
+    font-size: 23px;
 }
 
 .container {
@@ -16,6 +33,7 @@
     background-color: #ccc;
     position: relative;
     border-radius: 15px;
+    margin: 7px;
 }
 
 

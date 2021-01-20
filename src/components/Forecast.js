@@ -9,7 +9,7 @@ function Forecast({ forecast }) {
         window.location.reload();
     }
 
-    // window.setInterval(refresh, 60000);
+    window.setInterval(refresh, 60000);
 
     return (
         <div className='weather-list'>

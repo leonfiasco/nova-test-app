@@ -13,7 +13,6 @@ import clear from '../images/clear-sky.svg';
 
 function Card({ date, temp, img, description }) {
     const days = new Date(date);
-    console.log(img);
     return (
         <div className='forecast-card'>
             <div className='day'><h3>{String(days).substr(0, 3)}</h3></div>

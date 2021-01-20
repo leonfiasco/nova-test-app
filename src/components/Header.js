@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/Header.css';
 
 function Header({ weather }) { 
+    console.log(weather);
     return (
         <div>
             {

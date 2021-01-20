@@ -9,10 +9,11 @@ import drizzle from '../images/drizzle.svg';
 import mist from '../images/mist.svg';
 import fog from '../images/fog.svg';
 
-function Card({ date, temp, img }) {
+function Card({ date, temp, img, description }) {
+    const days = new Date(date);
     return (
         <div className='forecast-card'>
-            <div className='day'><h3>Mon</h3></div>
+            <div className='day'><h3>{String(days).substr(0, 3)}</h3></div>
             <div className='temp'><h3>{Math.round(temp)}°</h3></div>
             <div className='img'>{(() => {
                             switch (img) {
@@ -29,6 +30,7 @@ function Card({ date, temp, img }) {
                                 default:
                             }
                         })()}</div>
+            <div className='description'><p>{description}</p></div>            
         </div>
     )
 }

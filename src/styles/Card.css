@@ -7,14 +7,28 @@
 
 .day {
     color: #fff;
+    padding-left: 15px;
+    font-size: 30px;
 }
+
 
 .temp {
     color: #fff;
+    position: relative;
+    left: 130px;
+}
+
+.temp h3 {
+    font-size: 30px;
 }
 
 .img {
     color: #fff;
+}
+
+.icon-container {
+    position: relative;
+    left: 350px;;
 }
 
 img {
@@ -22,3 +36,7 @@ img {
     width: 50px;
     color:#fff
   }
+
+.description {
+    color: #fff;
+}

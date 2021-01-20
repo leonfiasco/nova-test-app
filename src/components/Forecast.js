@@ -5,11 +5,12 @@ import '../styles/Forecast.css';
 
 function Forecast({ forecast }) {
     const arr = forecast.list;
-    window.setInterval(refresh, 60000);
-
-    function refresh() {
+    const refresh = () => {
         window.location.reload();
     }
+
+    // window.setInterval(refresh, 60000);
+
     return (
         <div className='weather-list'>
             {arr && arr.map((el, i) => {

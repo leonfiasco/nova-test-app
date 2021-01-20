@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 .weather-list {
     height: 650px;
     width: 618px;
+    padding-top: 5px;
     background-color: black;
 }

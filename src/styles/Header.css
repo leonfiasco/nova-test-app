@@ -11,3 +11,22 @@
     margin: 0 auto;
 }
 
+.container {
+    height: 25px;
+    background-color: #ccc;
+    position: relative;
+}
+
+
+.container .progress-bar {
+    position: absolute;
+    height: 100%;
+    background-color: blue;
+    animation: progress-animation 60s infinite;
+}
+
+@keyframes progress-animation {
+    0% { width: 0%; }
+    100% { width: 100% }
+}
+

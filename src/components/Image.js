@@ -3,7 +3,7 @@ import React from 'react'
 import '../styles/Card.css';
 
 
-const Image = ({ cloud, rain, drizzle, mist, fog }) => {
+const Image = ({ cloud, rain, drizzle, mist, fog, snow, clear }) => {
     return (
         <div>
            {(() => {
@@ -17,6 +17,10 @@ const Image = ({ cloud, rain, drizzle, mist, fog }) => {
                    return <img alt="mist" src={mist} />
                } else if (fog) {
                    return <img alt="fog" src={fog} />
+               }else if (clear) {
+                   return <img alt="clear" src={clear} />
+               }else if (snow) {
+                   return <img alt="snow" src={snow} />
                }
            })()}
         </div>

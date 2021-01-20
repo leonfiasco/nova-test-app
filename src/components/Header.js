@@ -14,6 +14,9 @@ function Header({ weather }) {
             </div>
                 )
             }
+            <div className='container'>
+                <div className="progress-bar"></div>
+            </div>
         </div>
     )
 }
